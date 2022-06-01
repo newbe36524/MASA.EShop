@@ -1,0 +1,20 @@
+# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+image: gitpod/workspace-dotnet
+tasks:
+  - init: echo 'init script' # runs during prebuild
+    command: |
+      docker-compose build
+      docker-compose up
+
+# List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
+ports:
+  - port: 8090
+    onOpen: open-browser
+  - port: 8081
+    onOpen: ignore
+  - port: 8082
+    onOpen: ignore
+  - port: 8083
+    onOpen: ignore
+  - port: 8084
+    onOpen: ignore
